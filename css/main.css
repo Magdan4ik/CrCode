@@ -75,7 +75,7 @@ body {
   margin: 0 auto;
   position: relative;
   line-height: 1.65;
-  color: var(--main-color);
+  color: #828282;
   font-family: var(--main-font);
   font-weight: 400;
   overflow-x: hidden;
@@ -102,6 +102,7 @@ a, button {
 
 img {
   max-width: 100%;
+  display: block;
   height: auto;
 }
 
@@ -276,23 +277,6 @@ input[type='radio']:checked::before {
 }
 
 /*==============================================================
-						BUTTONS START */
-/*============================================================= */
-.btn {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 200px;
-  height: 40px;
-  color: #fff;
-  line-height: normal;
-  font-family: var(--main-font), sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  transition: 0.2s;
-}
-
-/*==============================================================
 						HEADER START */
 /*============================================================= */
 .header {
@@ -428,6 +412,77 @@ input[type='radio']:checked::before {
           transform: rotate(45deg) scale(-1, -1);
 }
 
+/*============= BUTTONS STYLE ============= */
+.btn {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 40px;
+  color: #fff;
+  line-height: normal;
+  font-family: var(--main-font), sans-serif;
+  font-size: 16px;
+  transition: 0.5s;
+}
+
+.btn--primary {
+  background: #CFDDE2;
+  color: #525252;
+}
+
+.btn--primary::before, .btn--primary::after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  border: 5px solid #ffffff;
+}
+
+.btn--primary::before {
+  top: 0;
+  left: 0;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+}
+
+.btn--primary::after {
+  bottom: 0;
+  right: 0;
+  border-left: 5px solid transparent;
+  border-top: 5px solid transparent;
+}
+
+.btn--primary:hover {
+  background: var(--main-color);
+  color: #fff;
+}
+
+/*============= TITLE STYLE ============= */
+.title {
+  position: relative;
+  display: block;
+  margin-top: 30px;
+  text-align: center;
+  font-size: 24px;
+  line-height: 3;
+  font-weight: normal;
+  color: var(--main-color);
+}
+
+.title::before {
+  content: attr(data-shadow);
+  position: absolute;
+  left: 0;
+  right: 0;
+  font-size: 41px;
+  line-height: 1;
+  font-weight: 800;
+  text-transform: uppercase;
+  opacity: 0.04;
+}
+
 /*==============================================================
 						COMMON STYLE START */
 /*============================================================= */
@@ -435,6 +490,7 @@ input[type='radio']:checked::before {
   padding-top: 55px;
 }
 
+/*============= HOME - SECTION 1 ============= */
 .base__inner {
   min-height: 1000px;
   display: flex;
@@ -468,8 +524,8 @@ input[type='radio']:checked::before {
 }
 
 .base__part--wedding .base__title {
-  right: 70px;
-  letter-spacing: 0.6em;
+  right: 0;
+  letter-spacing: 0.7em;
 }
 
 .base__part--wedding .base__nav {
@@ -507,6 +563,10 @@ input[type='radio']:checked::before {
   color: #422362;
   z-index: 2;
   text-transform: uppercase;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .base__nav {
@@ -515,6 +575,50 @@ input[type='radio']:checked::before {
   width: 390px;
   padding-top: 55px;
   z-index: 1;
+}
+
+/*============= HOME - SECTION 2 ============= */
+.advant__list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+.advant__item {
+  flex: 0 1 26%;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.advant__item:hover .advant__ico {
+  -webkit-filter: contrast(1);
+          filter: contrast(1);
+}
+
+.advant__ico {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+  -webkit-filter: contrast(0);
+          filter: contrast(0);
+  transition: 0.3s -webkit-filter;
+  transition: 0.3s filter;
+  transition: 0.3s filter, 0.3s -webkit-filter;
+}
+
+.advant__txt {
+  font-size: 14px;
+  color: #000;
+  margin-bottom: 30px;
+}
+
+.advant__btn {
+  margin-top: auto;
 }
 
 /*============= SOCIAL STYLE START ============= */
@@ -563,6 +667,7 @@ input[type='radio']:checked::before {
   background-image: url(../img/icons/ico-instagram.svg);
 }
 
+/*============= NAVIGATION STYLE START ============= */
 .navigation {
   margin-top: 30px;
 }

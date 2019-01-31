@@ -1,9 +1,69 @@
+/*============= BUTTONS STYLE ============= */
+.btn
+	position: relative
+	display: inline-flex
+	justify-content: center
+	align-items: center
+	width: 300px
+	height: 40px
+	color: #fff
+	line-height: normal
+	font-family: var(--main-font), sans-serif
+	font-size: 16px
+	transition: 0.5s
+	&--primary
+		background: #CFDDE2
+		color: #525252
+		&::before,
+		&::after
+			content: ""
+			width: 0
+			height: 0
+			position: absolute
+			border: 5px solid #ffffff
+		&::before
+			top: 0
+			left: 0
+			border-right: 5px solid transparent
+			border-bottom: 5px solid transparent
+		&::after
+			bottom: 0
+			right: 0
+			border-left: 5px solid transparent
+			border-top: 5px solid transparent
+		&:hover
+			background: var(--main-color)
+			color: #fff
+/*============= TITLE STYLE ============= */
+.title
+	position: relative
+	display: block
+	margin-top: 30px
+	text-align: center
+	font-size: 24px
+	line-height: 3
+	font-weight: normal
+	color: var(--main-color)
+	&::before
+		content: attr(data-shadow)
+		position: absolute
+		left: 0
+		right: 0
+		font-size: 41px
+		line-height: 1
+		font-weight: 800
+		text-transform: uppercase
+		opacity: 0.04
+
 /*==============================================================
 						COMMON STYLE START
 /*============================================================= */
 .main
 	padding-top: 55px
 
+
+
+/*============= HOME - SECTION 1 ============= */
 .base
 	&__inner
 		min-height: 1000px
@@ -31,8 +91,8 @@
 			justify-content: flex-end
 			border-right: 2px solid #fff
 			.base__title
-				right: 70px
-				letter-spacing: 0.6em
+				right: 0
+				letter-spacing: 0.7em
 			.base__nav
 				padding-right: 65px
 				text-align: right
@@ -57,12 +117,48 @@
 		color: #422362
 		z-index: 2
 		text-transform: uppercase
+		user-select: none
 	&__nav
 		position: relative
 		height: 100%
 		width: 390px
 		padding-top: 55px
 		z-index: 1
+
+
+/*============= HOME - SECTION 2 ============= */
+.advant
+	&__list
+		display: flex
+		flex-flow: row wrap
+		justify-content: space-evenly
+	&__item
+		flex: 0 1 26%
+		display: flex
+		flex-flow: column wrap
+		align-items: center
+		margin-bottom: 60px
+		&:hover
+			.advant__ico
+				filter: contrast(1)
+	&__ico
+		display: flex
+		align-items: flex-end
+		justify-content: center
+		width: 100px
+		height: 100px
+		margin-bottom: 20px
+		filter: contrast(0)
+		transition: 0.3s filter
+	&__txt
+		font-size: 14px
+		color: #000
+		margin-bottom: 30px
+	&__btn
+		margin-top: auto
+
+
+
 
 
 /*============= SOCIAL STYLE START ============= */
@@ -96,6 +192,8 @@
 	&__insta
 		background-image: url(../img/icons/ico-instagram.svg)
 
+
+/*============= NAVIGATION STYLE START ============= */
 .navigation
 	margin-top: 30px
 	li
@@ -127,3 +225,4 @@
 				&::before
 					content: ""
 					margin-right: 15px
+
