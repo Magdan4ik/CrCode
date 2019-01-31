@@ -1,0 +1,99 @@
+/*==============================================================
+						HEADER START
+/*============================================================= */
+.header
+	background-color: #fff
+	position: fixed
+	left: 0
+	right: 0
+	top: 0
+	width: 100%
+	height: 55px
+	z-index: 3
+	box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.25)
+	// overflow: hidden
+	&__inner
+		height: 100%
+		display: flex
+		align-items: center
+		justify-content: center
+	&__lside
+		flex: 1
+	&__rside
+		flex: 1
+		.header__nav
+			justify-content: flex-end
+	&__logo
+		flex-shrink: 0
+		width: 300px
+		height: 35px
+		margin: 0 20px
+		a
+			display: block
+			img
+				display: block
+	&__nav
+		display: flex
+		> li
+			> a
+				display: inline-flex
+				align-items: center
+				padding: 15px
+				color: var(--main-color)
+				font-size: 18px
+				line-height: 1.4
+				span
+					transition: 0.3s border
+					border-bottom: 1px solid transparent
+			&:hover
+				span
+					border-color: var(--main-color)
+	&__tel
+		margin-right: 25px
+		span
+			color: #DCCADC
+			font-weight: 300
+	&__ddown
+		position: relative
+		> a
+			&::after
+				content: ""
+				border: solid var(--main-color)
+				border-width: 0 1px 1px 0
+				display: inline-block
+				padding: 3px
+				margin-left: 10px
+				transform: rotate(45deg)
+				transition: 0.3s
+		> ul
+			display: none
+			background: #fff
+			position: absolute
+			left: 0
+			right: 0
+			width: 100%
+			min-height: 100px
+			min-width: 185px
+			margin-top: -1px
+			border: 1px solid rgba(0, 0, 0, 0.1)
+			border-top: none
+			box-shadow: 0 3px 4px 0px rgba(0, 0, 0, 0.25)
+			overflow: hidden
+			animation: flipInY 0.9s both
+			> li
+				> a
+					background-color: #fff
+					display: block
+					padding: 6px 20px
+					color: var(--main-color)
+					font-size: 18px
+					transition: 0.3s background
+					&:hover
+						background-color: #F5E8F3
+
+		&:hover
+			> ul
+				display: block
+			> a
+				&::after
+					transform: rotate(45deg) scale(-1, -1)
