@@ -69,11 +69,11 @@ html, body {
 }
 
 body {
-  font-size: 16px;
+  position: relative;
   min-width: 320px;
   max-width: 1920px;
   margin: 0 auto;
-  position: relative;
+  font-size: 18px;
   line-height: 1.65;
   color: #828282;
   font-family: var(--main-font);
@@ -619,6 +619,65 @@ input[type='radio']:checked::before {
 
 .advant__btn {
   margin-top: auto;
+}
+
+/*============= HOME - SECTION 3 ============= */
+.command {
+  background: #F1F6F8;
+}
+
+.command::before, .command::after {
+  content: "";
+  display: block;
+  height: 145px;
+  width: 100%;
+}
+
+.command::before {
+  background: linear-gradient(to left top, #F1F6F8 50%, #fff 50.3%);
+}
+
+.command::after {
+  background: linear-gradient(to right bottom, #F1F6F8 50%, #fff 50.3%);
+}
+
+.command__list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.command__item {
+  flex-basis: 31%;
+  min-width: 350px;
+  margin: 15px;
+}
+
+.command__photo {
+  width: 100%;
+  height: 365px;
+  margin-bottom: 15px;
+  -webkit-clip-path: polygon(0% 5%, 5% 0, 100% 0, 100% 95%, 95% 100%, 0 100%);
+          clip-path: polygon(0% 5%, 5% 0, 100% 0, 100% 95%, 95% 100%, 0 100%);
+}
+
+.command__photo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.command__name {
+  margin-bottom: 15px;
+  font-size: 24px;
+  line-height: 1.2;
+  color: #262626;
+}
+
+.command__desc {
+  font-size: 14px;
+  color: #828282;
 }
 
 /*============= SOCIAL STYLE START ============= */
