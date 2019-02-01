@@ -483,6 +483,94 @@ input[type='radio']:checked::before {
   opacity: 0.04;
 }
 
+/*============= SOCIAL STYLE START ============= */
+.social {
+  display: inline-flex;
+  align-items: center;
+}
+
+.social li {
+  width: 30px;
+  height: 30px;
+  margin: 0 17px;
+  border: 1px solid var(--main-color);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  transition: 0.3s ease;
+}
+
+.social li:hover {
+  box-shadow: inset 0 0 3px var(--main-color);
+}
+
+.social li a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 18px 18px;
+  font-size: 0;
+}
+
+.social__youtube {
+  background-image: url(../img/icons/ico-youtube.svg);
+}
+
+.social__facebook {
+  background-image: url(../img/icons/ico-facebook.svg);
+}
+
+.social__insta {
+  background-image: url(../img/icons/ico-instagram.svg);
+}
+
+.social__vk {
+  background-image: url(../img/icons/ico-vkontakte.svg);
+}
+
+/*============= NAVIGATION STYLE START ============= */
+.navigation {
+  margin-top: 30px;
+}
+
+.navigation li a {
+  display: inline-block;
+  padding: 8px;
+  font-size: 24px;
+  color: var(--main-color);
+}
+
+.navigation li a::after, .navigation li a::before {
+  background: var(--main-color);
+  width: 4px;
+  height: 4px;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  transition: 0.3s;
+}
+
+.navigation li a:hover::after, .navigation li a:hover::before {
+  -webkit-transform: scale(2) rotate(45deg);
+          transform: scale(2) rotate(45deg);
+}
+
+.navigation--lside li a::after {
+  content: "";
+  margin-left: 15px;
+}
+
+.navigation--rside li a::before {
+  content: "";
+  margin-right: 15px;
+}
+
 /*==============================================================
 						COMMON STYLE START */
 /*============================================================= */
@@ -680,88 +768,108 @@ input[type='radio']:checked::before {
   color: #828282;
 }
 
-/*============= SOCIAL STYLE START ============= */
-.social {
-  display: inline-flex;
-  align-items: center;
+/*============= HOME - SECTION 3 ============= */
+.command {
+  background: #F1F6F8;
 }
 
-.social li {
-  width: 30px;
-  height: 30px;
-  margin: 0 17px;
-  border: 1px solid var(--main-color);
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-  transition: 0.3s ease;
+.command::before, .command::after {
+  content: "";
+  display: block;
+  height: 145px;
+  width: 100%;
 }
 
-.social li:hover {
-  box-shadow: inset 0 0 3px var(--main-color);
+.command::before {
+  background: linear-gradient(to left top, #F1F6F8 50%, #fff 50.3%);
 }
 
-.social li a {
+.command::after {
+  background: linear-gradient(to right bottom, #F1F6F8 50%, #fff 50.3%);
+}
+
+.command__list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.command__item {
+  flex-basis: 31%;
+  min-width: 350px;
+  margin: 15px;
+}
+
+.command__photo {
+  width: 100%;
+  height: 365px;
+  margin-bottom: 15px;
+  -webkit-clip-path: polygon(0% 5%, 5% 0, 100% 0, 100% 95%, 95% 100%, 0 100%);
+          clip-path: polygon(0% 5%, 5% 0, 100% 0, 100% 95%, 95% 100%, 0 100%);
+}
+
+.command__photo img {
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.command__name {
+  margin-bottom: 15px;
+  font-size: 24px;
+  line-height: 1.2;
+  color: #262626;
+}
+
+.command__desc {
+  font-size: 14px;
+  color: #828282;
+}
+
+/*============= HOME - SECTION 4 ============= */
+.owner {
+  position: relative;
+}
+
+.owner__title {
+  margin-bottom: 15px;
+}
+
+.owner__photo {
+  height: 650px;
+  -webkit-clip-path: polygon(100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
+          clip-path: polygon(100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
+}
+
+.owner__photo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.owner__info {
+  margin-top: 60px;
+}
+
+.owner__caption {
+  font-size: 24px;
+  font-weight: normal;
+  text-align: center;
+  color: #525252;
+  margin-bottom: 15px;
+}
+
+.owner__contacts {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 18px 18px;
-  font-size: 0;
-}
-
-.social__youtube {
-  background-image: url(../img/icons/ico-youtube.svg);
-}
-
-.social__facebook {
-  background-image: url(../img/icons/ico-facebook.svg);
-}
-
-.social__insta {
-  background-image: url(../img/icons/ico-instagram.svg);
-}
-
-/*============= NAVIGATION STYLE START ============= */
-.navigation {
   margin-top: 30px;
 }
 
-.navigation li a {
-  display: inline-block;
-  padding: 8px;
-  font-size: 24px;
-  color: var(--main-color);
-}
-
-.navigation li a::after, .navigation li a::before {
-  background: var(--main-color);
-  width: 4px;
-  height: 4px;
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  transition: 0.3s;
-}
-
-.navigation li a:hover::after, .navigation li a:hover::before {
-  -webkit-transform: scale(2) rotate(45deg);
-          transform: scale(2) rotate(45deg);
-}
-
-.navigation--lside li a::after {
-  content: "";
-  margin-left: 15px;
-}
-
-.navigation--rside li a::before {
-  content: "";
-  margin-right: 15px;
+.owner__contacts .social {
+  margin: 20px 0;
 }
 
 /*==============================================================
