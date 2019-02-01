@@ -1,5 +1,13 @@
-document.addEventListener("DOMContentLoaded", function(event) {
+document.addEventListener("DOMContentLoaded", initJs)
 
-	// Code
 
-});
+
+function initJs() {
+	const d = document;
+	const w = window;
+	console.log('document loaded');
+}
+
+function autoHeight(el) {
+	el.style.height = (el.scrollHeight) + "px";
+}

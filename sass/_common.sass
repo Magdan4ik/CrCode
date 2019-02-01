@@ -195,7 +195,7 @@
 	&__list
 		display: flex
 		flex-flow: row wrap
-		justify-content: space-evenly
+		justify-content: space-around
 	&__item
 		flex: 0 1 26%
 		display: flex
@@ -220,46 +220,6 @@
 		margin-bottom: 30px
 	&__btn
 		margin-top: auto
-
-/*============= HOME - SECTION 3 ============= */
-.command
-	background: #F1F6F8
-	&::before,
-	&::after
-		content: ""
-		display: block
-		height: 145px
-		width: 100%
-	&::before
-		background: linear-gradient(to left top, #F1F6F8 50%, #fff 50.3%)
-	&::after
-		background: linear-gradient(to right bottom, #F1F6F8 50%, #fff 50.3%)
-	&__list
-		display: flex
-		flex-flow: row wrap
-		justify-content: center
-	&__item
-		flex-basis: 31%
-		min-width: 350px
-		margin: 15px
-	&__photo
-		width: 100%
-		height: 365px
-		margin-bottom: 15px
-		clip-path: polygon(0% 5%, 5% 0, 100% 0, 100% 95%, 95% 100%, 0 100%)
-		img
-			width: 100%
-			height: 100%
-			object-fit: cover
-	&__name
-		margin-bottom: 15px
-		font-size: 24px
-		line-height: 1.2
-		color: #262626
-	&__desc
-		font-size: 14px
-		color: #828282
-
 
 /*============= HOME - SECTION 3 ============= */
 .command
@@ -329,3 +289,64 @@
 		margin-top: 30px
 		.social
 			margin: 20px 0
+
+/*============= HOME - SECTION 5 ============= */
+.feedback
+	background: #F1F6F8
+	&::before,
+	&::after
+		content: ""
+		display: block
+		height: 145px
+		width: 100%
+	&::before
+		background: linear-gradient(to right top, #F1F6F8 50%, #fff 50.3%)
+	&::after
+		background: linear-gradient(to left bottom, #F1F6F8 50%, #fff 50.3%)
+	&__inner
+		padding-bottom: 50px
+	&__form
+		display: grid
+		grid-template-columns: repeat(3, 1fr)
+		grid-gap: 25px
+		align-items: end
+	&__label
+		display: block
+		color: #525252
+		&--textarea
+			grid-column: 1/-1
+		&--error
+			color: red
+			.feedback__bar
+				background: red
+				&::before, &::after
+					width: 50%
+					background: red
+	&__field
+		&:focus ~ .feedback__bar::before,
+		&:focus ~ .feedback__bar::after
+			width: 50%
+	&__highlight
+		position: relative
+		user-select: none
+	&__bar
+		position: relative
+		display: block
+		background: #CFDDE2
+		width: 100%
+		height: 1px
+		&::before, &::after
+			content: ''
+			height: 2px
+			width: 0
+			bottom: 0
+			position: absolute
+			background: var(--main-color)
+			transition: 0.2s width ease
+		&::before
+			left: 50%
+		&::after
+			right: 50%
+	&__btn
+		grid-column: 1/-1
+		justify-self: center

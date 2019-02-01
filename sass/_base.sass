@@ -79,23 +79,25 @@ ul
 input,
 textarea,
 select
+	background: transparent
 	width: 100%
-	padding: 15px 20px
-	font-size: 14px
+	display: block
+	padding: 5px 0
+	font-size: 16px
 	font-family: var(--main-font)
 	font-weight: 300
 	line-height: normal
-	color: #000
-	border: solid 2px #000
-	transition: 0.3s border
-	&.success
-		border-color: green
-	&.error
-		border-color: red
+	border: none
+	outline: none
+	color: #525252
+	&::placeholder
+		color: #CFDDE2
+		opacity: 1
 textarea
 	resize: vertical
-	min-height: 130px
-	height: 150px
+	max-height: 200px
+	min-height: 32px
+	height: 32px
 
 input[type='radio'],
 input[type='checkbox'],

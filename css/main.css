@@ -118,33 +118,52 @@ ul {
 input,
 textarea,
 select {
+  background: transparent;
   width: 100%;
-  padding: 15px 20px;
-  font-size: 14px;
+  display: block;
+  padding: 5px 0;
+  font-size: 16px;
   font-family: var(--main-font);
   font-weight: 300;
   line-height: normal;
-  color: #000;
-  border: solid 2px #000;
-  transition: 0.3s border;
+  border: none;
+  outline: none;
+  color: #525252;
 }
 
-input.success,
-textarea.success,
-select.success {
-  border-color: green;
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder,
+select::-webkit-input-placeholder {
+  color: #CFDDE2;
+  opacity: 1;
 }
 
-input.error,
-textarea.error,
-select.error {
-  border-color: red;
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder,
+select:-ms-input-placeholder {
+  color: #CFDDE2;
+  opacity: 1;
+}
+
+input::-ms-input-placeholder,
+textarea::-ms-input-placeholder,
+select::-ms-input-placeholder {
+  color: #CFDDE2;
+  opacity: 1;
+}
+
+input::placeholder,
+textarea::placeholder,
+select::placeholder {
+  color: #CFDDE2;
+  opacity: 1;
 }
 
 textarea {
   resize: vertical;
-  min-height: 130px;
-  height: 150px;
+  max-height: 200px;
+  min-height: 32px;
+  height: 32px;
 }
 
 input[type='radio'],
@@ -669,7 +688,7 @@ input[type='radio']:checked::before {
 .advant__list {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 
 .advant__item {
@@ -707,65 +726,6 @@ input[type='radio']:checked::before {
 
 .advant__btn {
   margin-top: auto;
-}
-
-/*============= HOME - SECTION 3 ============= */
-.command {
-  background: #F1F6F8;
-}
-
-.command::before, .command::after {
-  content: "";
-  display: block;
-  height: 145px;
-  width: 100%;
-}
-
-.command::before {
-  background: linear-gradient(to left top, #F1F6F8 50%, #fff 50.3%);
-}
-
-.command::after {
-  background: linear-gradient(to right bottom, #F1F6F8 50%, #fff 50.3%);
-}
-
-.command__list {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-}
-
-.command__item {
-  flex-basis: 31%;
-  min-width: 350px;
-  margin: 15px;
-}
-
-.command__photo {
-  width: 100%;
-  height: 365px;
-  margin-bottom: 15px;
-  -webkit-clip-path: polygon(0% 5%, 5% 0, 100% 0, 100% 95%, 95% 100%, 0 100%);
-          clip-path: polygon(0% 5%, 5% 0, 100% 0, 100% 95%, 95% 100%, 0 100%);
-}
-
-.command__photo img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.command__name {
-  margin-bottom: 15px;
-  font-size: 24px;
-  line-height: 1.2;
-  color: #262626;
-}
-
-.command__desc {
-  font-size: 14px;
-  color: #828282;
 }
 
 /*============= HOME - SECTION 3 ============= */
@@ -870,6 +830,103 @@ input[type='radio']:checked::before {
 
 .owner__contacts .social {
   margin: 20px 0;
+}
+
+/*============= HOME - SECTION 5 ============= */
+.feedback {
+  background: #F1F6F8;
+}
+
+.feedback::before, .feedback::after {
+  content: "";
+  display: block;
+  height: 145px;
+  width: 100%;
+}
+
+.feedback::before {
+  background: linear-gradient(to right top, #F1F6F8 50%, #fff 50.3%);
+}
+
+.feedback::after {
+  background: linear-gradient(to left bottom, #F1F6F8 50%, #fff 50.3%);
+}
+
+.feedback__inner {
+  padding-bottom: 50px;
+}
+
+.feedback__form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 25px;
+  align-items: end;
+}
+
+.feedback__label {
+  display: block;
+  color: #525252;
+}
+
+.feedback__label--textarea {
+  grid-column: 1/-1;
+}
+
+.feedback__label--error {
+  color: red;
+}
+
+.feedback__label--error .feedback__bar {
+  background: red;
+}
+
+.feedback__label--error .feedback__bar::before, .feedback__label--error .feedback__bar::after {
+  width: 50%;
+  background: red;
+}
+
+.feedback__field:focus ~ .feedback__bar::before,
+.feedback__field:focus ~ .feedback__bar::after {
+  width: 50%;
+}
+
+.feedback__highlight {
+  position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.feedback__bar {
+  position: relative;
+  display: block;
+  background: #CFDDE2;
+  width: 100%;
+  height: 1px;
+}
+
+.feedback__bar::before, .feedback__bar::after {
+  content: '';
+  height: 2px;
+  width: 0;
+  bottom: 0;
+  position: absolute;
+  background: var(--main-color);
+  transition: 0.2s width ease;
+}
+
+.feedback__bar::before {
+  left: 50%;
+}
+
+.feedback__bar::after {
+  right: 50%;
+}
+
+.feedback__btn {
+  grid-column: 1/-1;
+  justify-self: center;
 }
 
 /*==============================================================
