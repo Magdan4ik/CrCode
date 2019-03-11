@@ -9,28 +9,13 @@
 	color: #fff
 	line-height: normal
 	font-family: var(--main-font), sans-serif
-	font-size: 16px
+	font-size: 14px
+	user-select: none
 	transition: 0.5s
 	&--primary
-		background: #CFDDE2
+		clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px)
+		background: var(--lblue)
 		color: #525252
-		&::before,
-		&::after
-			content: ""
-			width: 0
-			height: 0
-			position: absolute
-			border: 5px solid #ffffff
-		&::before
-			top: 0
-			left: 0
-			border-right: 5px solid transparent
-			border-bottom: 5px solid transparent
-		&::after
-			bottom: 0
-			right: 0
-			border-left: 5px solid transparent
-			border-top: 5px solid transparent
 		&:hover
 			background: var(--main-color)
 			color: #fff
@@ -46,7 +31,7 @@
 	font-weight: normal
 	color: var(--main-color)
 	&::before
-		content: attr(data-shadow)
+		content: attr(data-title)
 		position: absolute
 		left: 0
 		right: 0
@@ -61,8 +46,8 @@
 	display: inline-flex
 	align-items: center
 	li
-		width: 30px
-		height: 30px
+		width: 25px
+		height: 25px
 		margin: 0 17px
 		border: 1px solid var(--main-color)
 		transform: rotate(-45deg)
@@ -78,7 +63,7 @@
 			transform: rotate(45deg)
 			background-repeat: no-repeat
 			background-position: center
-			background-size: 18px 18px
+			background-size: 65% 65%
 			font-size: 0
 	&__youtube
 		background-image: url(../img/icons/ico-youtube.svg)
@@ -121,11 +106,24 @@
 				&::before
 					content: ""
 					margin-right: 15px
+
 /*==============================================================
 						COMMON STYLE START
 /*============================================================= */
 .main
 	padding-top: 55px
+	min-height: calc(100vh - 220px)
+
+/*============= MODIFICATORS ============= */
+.--lblue
+	--background: #F1F6F8
+	background: var(--background)
+.--pleft
+	clip-path: polygon(0 0, 100% 135px, 100% 100%, 0 calc(100% - 135px))
+	padding: 135px 0 215px 0
+.--pright
+	clip-path: polygon(0 135px, 100% 0, 100% calc(100% - 135px), 0 100%)
+	padding: 135px 0 215px 0
 
 /*============= HOME - SECTION 1 ============= */
 .base
@@ -195,9 +193,9 @@
 	&__list
 		display: flex
 		flex-flow: row wrap
-		justify-content: space-around
+		justify-content: center
 	&__item
-		flex: 0 1 26%
+		flex: 0 1 33.3%
 		display: flex
 		flex-flow: column wrap
 		align-items: center
@@ -217,52 +215,17 @@
 	&__txt
 		font-size: 14px
 		color: #000
+		max-width: 300px
+		margin: 0 auto
 		margin-bottom: 30px
 	&__btn
 		margin-top: auto
 
-/*============= HOME - SECTION 3 ============= */
-.command
-	background: #F1F6F8
-	&::before,
-	&::after
-		content: ""
-		display: block
-		height: 145px
-		width: 100%
-	&::before
-		background: linear-gradient(to left top, #F1F6F8 50%, #fff 50.3%)
-	&::after
-		background: linear-gradient(to right bottom, #F1F6F8 50%, #fff 50.3%)
-	&__list
-		display: flex
-		flex-flow: row wrap
-		justify-content: center
-	&__item
-		flex-basis: 31%
-		min-width: 350px
-		margin: 15px
-	&__photo
-		width: 100%
-		height: 365px
-		margin-bottom: 15px
-		clip-path: polygon(0% 5%, 5% 0, 100% 0, 100% 95%, 95% 100%, 0 100%)
-		img
-			width: 100%
-			height: 100%
-			object-fit: cover
-	&__name
-		margin-bottom: 15px
-		font-size: 24px
-		line-height: 1.2
-		color: #262626
-	&__desc
-		font-size: 14px
-		color: #828282
 
 /*============= HOME - SECTION 4 ============= */
 .owner
 	position: relative
+	padding-bottom: 80px
 	&__title
 		margin-bottom: 15px
 	&__photo
@@ -288,23 +251,15 @@
 		align-items: center
 		margin-top: 30px
 		.social
-			margin: 20px 0
+			margin: 25px 0
+			li
+				width: 30px
+				height: 30px
 
 /*============= HOME - SECTION 5 ============= */
 .feedback
-	background: #F1F6F8
-	&::before,
-	&::after
-		content: ""
-		display: block
-		height: 145px
-		width: 100%
-	&::before
-		background: linear-gradient(to right top, #F1F6F8 50%, #fff 50.3%)
-	&::after
-		background: linear-gradient(to left bottom, #F1F6F8 50%, #fff 50.3%)
-	&__inner
-		padding-bottom: 50px
+	&__title
+		margin-bottom: 50px
 	&__form
 		display: grid
 		grid-template-columns: repeat(3, 1fr)
@@ -332,7 +287,7 @@
 	&__bar
 		position: relative
 		display: block
-		background: #CFDDE2
+		background: var(--lblue)
 		width: 100%
 		height: 1px
 		&::before, &::after

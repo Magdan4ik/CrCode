@@ -1,14 +1,15 @@
 \:root
-	--main-color: #571668
+	--main-color: #422362
+	--lblue: #CFDDE2
 	--main-font: 'Open Sans', sans-serif
-
+	--background: #fff
 *
 	margin: 0
 	padding: 0
 	box-sizing: border-box
-	&:before, &:after
+	&:before,
+	&:after
 		box-sizing: border-box
-
 \:focus
 	outline: none
 
@@ -91,7 +92,7 @@ select
 	outline: none
 	color: #525252
 	&::placeholder
-		color: #CFDDE2
+		color: var(--lblue)
 		opacity: 1
 textarea
 	resize: vertical

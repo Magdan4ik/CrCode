@@ -2,4 +2,39 @@
 						FOOTER STYLE START
 /*============================================================= */
 .footer
-	display: block
+	background: var(--main-color)
+	margin-top: -135px
+	padding-top: 185px
+	padding-bottom: 30px
+	clip-path: polygon(0 0, 100% 135px, 100% 100%, 0 100%)
+	color: var(--lblue)
+	a
+		color: var(--lblue)
+	&__logo
+		width: 155px
+	&__nav
+		display: grid
+		grid-template-columns: repeat(6, 1fr)
+		grid-gap: 20px
+	&__navlist
+		li
+			a
+
+	&__contacts
+		display: flex
+		flex-flow: column wrap
+		text-align: center
+	&__tel
+	&__mail
+		margin-top: 25px
+	&__copy
+		margin-top: auto
+		font-size: 12px
+		color: #401C49
+	&__soc
+		text-align: center
+		filter: brightness(0) invert(1)
+		&-title
+			margin-bottom: 15px
+			font-weight: 300
+			opacity: 0.3

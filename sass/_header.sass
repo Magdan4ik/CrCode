@@ -11,7 +11,6 @@
 	height: 55px
 	z-index: 3
 	box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.25)
-	// overflow: hidden
 	&__inner
 		height: 100%
 		display: flex
@@ -58,13 +57,11 @@
 		> a
 			&::after
 				content: ""
-				border: solid var(--main-color)
-				border-width: 0 1px 1px 0
-				display: inline-block
-				padding: 3px
+				background: url('../img/elements/arrow--down.svg') no-repeat center/contain
+				width: 10px
+				height: 10px
 				margin-left: 10px
-				transform: rotate(45deg)
-				transition: 0.3s
+				transition: 0.3s transform
 		> ul
 			display: none
 			background: #fff
@@ -96,4 +93,4 @@
 				display: block
 			> a
 				&::after
-					transform: rotate(45deg) scale(-1, -1)
+					transform: scaleY(-1)

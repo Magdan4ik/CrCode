@@ -30,7 +30,7 @@
 							<ul class="social">
 								<li><a class="social__youtube" href="#youtube">Youtube</a></li>
 								<li><a class="social__facebook" href="#facebook">Facebook</a></li>
-								<li><a  class="social__insta" href="#insta">Instagram</a></li>
+								<li><a class="social__insta" href="#insta">Instagram</a></li>
 							</ul>
 							<ul class="navigation navigation--rside">
 								<li><a href="#">Корпоративные</a></li>
@@ -45,7 +45,7 @@
 			</section>
 			<section class="advant">
 				<div class="advant__inner container">
-					<h2 class="title advant__title" data-shadow="Почему мы">Почему мы</h2>
+					<h2 class="title advant__title" data-title="Почему мы">Почему мы</h2>
 					<ul class="advant__list">
 						<li class="advant__item">
 							<figure class="advant__ico"><img src="../img/icons/ico-crystal.svg" alt=""></figure>
@@ -75,31 +75,31 @@
 					</ul>
 				</div>
 			</section>
-			<section class="command">
-				<div class="command__inner container">
-					<h2 class="title command__title" data-shadow="Наша команда">Наша команда</h2>
-					<ul class="command__list">
-						<li class="command__item">
-							<figure class="command__photo"><img src="../img/command__photo.jpg" alt=""></figure>
-							<p class="command__name">Алена и Андрей</p>
-							<p class="command__desc">Теперь Вам не придется думать о предсвадебной суете и заботах, поскольку всю работу за вас сделает профессиональный организатор.</p>
+			<section class="c1 --lblue --pright">
+				<div class="c1__inner container">
+					<h2 class="title" data-title="Наша команда">Наша команда</h2>
+					<ul class="c1__list">
+						<li class="c1__item">
+							<figure class="c1__photo"><img src="../img/command__photo.jpg" alt=""></figure>
+							<p class="c1__name">Алена и Андрей</p>
+							<p class="c1__desc">Теперь Вам не придется думать о предсвадебной суете и заботах, поскольку всю работу за вас сделает профессиональный организатор.</p>
 						</li>
-						<li class="command__item">
-							<figure class="command__photo"><img src="../img/command__photo.jpg" alt=""></figure>
-							<p class="command__name">Алена и Андрей</p>
-							<p class="command__desc">Теперь Вам не придется думать о предсвадебной суете и заботах, поскольку всю работу за вас сделает профессиональный организатор.</p>
+						<li class="c1__item">
+							<figure class="c1__photo"><img src="../img/command__photo.jpg" alt=""></figure>
+							<p class="c1__name">Алена и Андрей</p>
+							<p class="c1__desc">Теперь Вам не придется думать о предсвадебной суете и заботах, поскольку всю работу за вас сделает профессиональный организатор.</p>
 						</li>
-						<li class="command__item">
-							<figure class="command__photo"><img src="../img/command__photo.jpg" alt=""></figure>
-							<p class="command__name">Алена и Андрей</p>
-							<p class="command__desc">Теперь Вам не придется думать о предсвадебной суете и заботах, поскольку всю работу за вас сделает профессиональный организатор.</p>
+						<li class="c1__item">
+							<figure class="c1__photo"><img src="../img/command__photo.jpg" alt=""></figure>
+							<p class="c1__name">Алена и Андрей</p>
+							<p class="c1__desc">Теперь Вам не придется думать о предсвадебной суете и заботах, поскольку всю работу за вас сделает профессиональный организатор.</p>
 						</li>
 					</ul>
 				</div>
 			 </section>
 			 <section class="owner">
 				<div class="owner__inner">
-					<h2 class="title owner__title" data-shadow="Алена Дроздова">Алена Дроздова</h2>
+					<h2 class="title owner__title" data-title="Алена Дроздова">Алена Дроздова</h2>
 					<figure class="owner__photo"><img src="../img/owner__photo.jpg" alt=""></figure>
 					<div class="container">
 						<div class="owner__info">
@@ -117,7 +117,7 @@
 					</div>
 				</div>
 			</section>
-			@@include('./chunks/feedback.html')
+			@@include('./chunks/feedback.html', {"bg": "--lblue"})
 		</main>
 		@@include('./chunks/footer.html')
 	</body>
