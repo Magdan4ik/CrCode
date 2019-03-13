@@ -129,10 +129,11 @@
 
 .screen
 	position: relative
+	padding-bottom: 25px
 	&::after
 		content: ""
 		position: absolute
-		bottom: -25px
+		bottom: 0
 		background: url('../img/screen__jeverly.svg') no-repeat center
 		background-size: 100% 100%
 		width: 100%
@@ -356,3 +357,39 @@
 	&__btn
 		grid-column: 1/-1
 		justify-self: center
+
+
+/*============= WEDDING - SECTION 1 ============= */
+.organize
+	background: #FEF5FB
+	margin-top: -80px
+	padding-top: 80px
+	padding-bottom: 60px
+	&__list
+		display: flex
+		flex-flow: row wrap
+		justify-content: center
+	&__item
+		flex: 0 1 25%
+		display: flex
+		flex-flow: column wrap
+		align-items: center
+		&:hover
+			.organize__ico
+				filter: contrast(1)
+	&__ico
+		display: flex
+		align-items: flex-end
+		justify-content: center
+		width: 100px
+		height: 100px
+		margin-bottom: 20px
+		filter: contrast(0)
+		transition: 0.3s filter
+	&__txt
+		font-size: 18px
+		color: #525252
+		max-width: 300px
+		margin: 0 auto
+		p
+			margin-bottom: 35px

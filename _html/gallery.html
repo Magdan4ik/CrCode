@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('./chunks/head.html', {"title": "Галерея"})
+
+	<body>
+		@@include('./chunks/header.html')
+		<main class="main">
+			<section class="gallery">
+				<div class="gallery__inner container">
+                    <h1>Галерея</h1>
+                    <ul class="gallery__list-top">
+                        <li>Все</li>
+                        <li>Свадьбы</li>
+                        <li>Семейные</li>
+                        <li>Детские</li>
+                        <li>Вечеринки</li>
+                        <li>Корпоративы</li>
+                        <li>Шоу-центр</li>
+                    </ul>
+                    <div class="gallery__blocks">
+                        <img src="../img/gallery-img.jpg" alt="">
+                    </div>
+                    
+				</div>
+			</section>
+		</main>
+		@@include('./chunks/footer.html')
+	</body>
+</html>
