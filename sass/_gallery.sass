@@ -1,13 +1,117 @@
 .gallery
     &__inner
-        h1
-            color: var(--main-color)
-            line-height: 1.8
-            font-size: 24px
+        padding-top: 70px
+        padding-bottom: 210px
+    &__title
+        color: var(--main-color)
+        line-height: 1.8
+        font-size: 24px
+        font-weight: 300
+        text-align: center
+        &--page
+            font-weight: 500
+            margin-bottom: 30px
+    &__filter
+        display: flex
+        flex-wrap: wrap
+        margin: 15px 0
+        margin-left: -15px
+        li
+            span
+                display: block
+                padding: 10px 15px
+                font-size: 18px
+                font-weight: 300
+                line-height: 1.4
+                cursor: pointer
+                user-select: none
+                transition: 0.4s color
+                &:hover
+                    color: var(--main-color)
+            &.active
+                span
+                    color: var(--main-color)
+    &__articles
+        display: grid
+        grid-template-columns: 1fr 1fr
+        grid-gap: 30px 20px
+        margin-top: 50px
+    &__article
+        animation: fadeIn 0.5s both
+        &:hover
+            img
+                transform: scale(1.05)
+    &__img
+        width: 100%
+        height: 290px
+        clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px)
+        overflow: hidden
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            transition: 0.3s transform
+    &__name
+        color: var(--main-color)
+        text-align: center
+        font-weight: 300
+        font-size: 18px
+        line-height: 20px
+        padding: 14px
+
+/* Gallery photos */
+.gallery
+    &__photos
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        grid-auto-rows: 300px
+        grid-gap: 10px
+    &__photo
+        overflow: hidden
+        &:nth-child(10n + 7),
+        &:nth-child(10n + 8)
+            grid-row: span 2
+            grid-column: span 2
+        > *
+            width: 100%
+            height: 100%
+            object-fit: cover
+            transition: 0.3s transform
+        &:hover > *
+            transform: scale(1.05)
+
+/* Gallery page inner */
+.gallery-page
+    &__inner
+        padding-top: 70px
+        padding-bottom: 210px
+    &__info
+        display: grid
+        grid-template-columns: 1fr 1fr
+        grid-auto-rows: 300px
+        grid-gap: 40px 30px
+        margin-bottom: 40px
+    &__photo
+        grid-row: 1/3
+        height: 640px
+        width: 100%
+        clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px)
+        overflow: hidden
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+    &__txt
+        font-size: 18px
+        line-height: 1.8
+        overflow: hidden
+        h4
+            font-weight: bold
+        p
             font-weight: 300
-            text-align: center
-            margin-top: 70px
-        &__list-top
-            display: flex
-            flex-flow: row wrap
-            justify-content: flex-start  
+            margin-bottom: 20px
+    &__vid
+        clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px)
+        overflow: hidden
+        > *
+            height: 100%
