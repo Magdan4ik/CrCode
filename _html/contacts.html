@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('./chunks/head.html', {"title": "Контакты"})
+
+	<body>
+		@@include('./chunks/header.html')
+		<main class="main">
+			<section class="screen">
+				<div class="screen__inner" style="background-image: url('../img/page__contacts.jpg')">
+					<div class="screen__content container">
+						<h2 class="screen__title">Контакты</h2>
+						<nav class="screen__nav">
+							<ul class="navigation navigation--lside">
+								<li><a href="#">Соцсети</a></li>
+								<li><a href="#">Карта</a></li>
+								<li><a href="#">Партнерам</a></li>
+								<li><a href="#">Вакансии</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+            </section>
+            <section class="contacts">
+				<h2 class="title" data-title="Контакты">Контакты</h2>
+				<div class="contacts__inner container">
+					<div class="contacts__blocks">
+						<div class="contacts__block contacts__block--addr">
+                            <ul class="contacts__items">
+                                <li class="contacts__item">
+                                    <div class="contacts__soc">
+                                        <h4 class="contacts__soc-title">Мероприятия</h4>
+                                        @@include('./chunks/social.html')
+                                    </div>
+                                    <div class="contacts__adr">
+                                        <p>Украина, г. Винница,</p>
+                                        <p>ул. Келецкая, 61а, оф. 4</p>
+                                    </div>
+                                </li>
+                                <li class="contacts__item">
+                                    <div class="contacts__soc">
+                                        <h4 class="contacts__soc-title">Свадьбы</h4>
+                                        @@include('./chunks/social.html')
+                                    </div>
+                                    <div class="contacts__tell">
+                                        <a class="contacts__tel" href="tel:+380961115353">096-111-53-53</a>
+                                        <a class="contacts__mail" href="mailto: alenacrystal@gmail.com">alenacrystal@gmail.com</a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="contacts__feedback">
+                                <p>Для заказа обратной связи заполните форму ниже и мы с Вами свяжемся в тeчении дня.</p>
+                                <a class="contacts__feedback-link" onclick="$('html,body').animate({scrollTop: document.body.scrollHeight}, 'slow');">Форма</a>
+                            </div>
+                        </div>
+                        <div class="contacts__block contacts__block--map">
+                            <div class="contacts__gmap" id="contacts-map">MAP</div>
+                        </div>
+                    </div>
+				</div>
+			</section>
+            <section class="comp2" style="background-image: url('../img/care.jpg')">
+				<div class="comp2__inner container comp2--partner">
+					<div class="comp2__title">Партнерам</div>
+                    <div class="comp2__txt">Вам остается только проснуться с хорошем настроении и насладиться вашим праздником! Запишитесь на первую бесплатную встречу и мы обсудим все интересующие вас вопросы. Вам остается только проснуться с хорошем настроении и насладиться вашим праздником!</div>
+                    <div class="comp2__txt">Вам остается только проснуться с хорошем настроении и насладиться вашим праздником! Запишитесь на первую бесплатную встречу и мы обсудим все интересующие вас вопросы. Вам остается только проснуться с хорошем настроении и насладиться вашим праздником!</div>
+                    <div class="comp2__btn">
+                    <a href="#" class="btn btn--primary">Записаться на встречу</a>
+				    </div>
+				</div>
+			</section>
+			<section class="comp5">
+				<h2 class="title" data-title="Вакансии">Вакансии</h2>
+				<figure class="comp5__img"><img src="../img/weeding-school.jpg" alt=""></figure>
+				<div class="comp5__inner container">
+					<div class="comp5__items">
+						<div class="comp5__item">
+							<div class="comp5__info">
+								<span class="comp5__name">Название вакансии<small>Проектная работа</small></span>
+								<span class="comp5__price">По собеседованию</span>
+                            </div>
+                            <p class="comp5__item-txt">Описание вакансии и все обьязаности, которые входят для исполнения кандидатом на эту должность. Ниже перечисление навыков и все чем должен обладать наш кандидат:</p>
+							<ul class="comp5__item-list">
+								<li>Необходимые навыки или опыт работы и желания развиваться.</li>
+								<li>Конкретные перечисление необходимых умений или качеств кандидата на вакансию.</li>
+								<li>Конкретные перечисление необходимых умений или качеств кандидата на вакансию.</li>
+                                <li>Необходимые навыки или опыт работы и желания развиваться.?</li>
+                            </ul>
+                            <p class="comp5__item-txt2">Перечисление всех плюшек которые получит кандидат от нас за хорошую работу и все обьязаности которые мы выполняем.</p>
+							<div class="comp5__btn"><a href="#" class="btn btn--primary">Узнать решение</a></div>
+						</div>
+						<div class="comp5__item">
+							<div class="comp5__info">
+								<span class="comp5__name">Название вакансии<small>Полная ставка</small></span>
+								<span class="comp5__price">от 4000грн</span>
+                            </div>
+                            <p class="comp5__item-txt">Описание вакансии и все обьязаности, которые входят для исполнения кандидатом на эту должность. Ниже перечисление навыков и все чем должен обладать наш кандидат:</p>
+							<ul class="comp5__item-list">
+								<li>Необходимые навыки или опыт работы и желания развиваться.</li>
+								<li>Конкретные перечисление необходимых умений или качеств кандидата на вакансию.</li>
+								<li>Конкретные перечисление необходимых умений или качеств кандидата на вакансию.</li>
+                                <li>Необходимые навыки или опыт работы и желания развиваться.?</li>
+                            </ul>
+                            <p class="comp5__item-txt2">Перечисление всех плюшек которые получит кандидат от нас за хорошую работу и все обьязаности которые мы выполняем.</p>
+							<div class="comp5__btn"><a href="#" class="btn btn--primary">Узнать решение</a></div>
+						</div>
+					</div>
+				</div>
+            </section>
+            <script src="//maps.googleapis.com/maps/api/js?v=3&amp;sensor=true&amp;key=AIzaSyAvaYaMAFdc_PdnJes5xUo7bSfcx6PspxU&amp;callback=initMap" async=""></script>
+			@@include('./chunks/feedback.html', {"bg": "--lblue"})
+		</main>
+		@@include('./chunks/footer.html')
+	</body>
+</html>
+

@@ -1,4 +1,4 @@
-.c1
+.comp1
 	&__list
 		display: flex
 		flex-flow: row wrap
@@ -21,10 +21,18 @@
 		font-size: 24px
 		line-height: 1.2
 		color: #262626
+		small
+			font-size: 14px
+			display: block
+			padding-bottom: 30px
 	&__desc
 		font-size: 14px
 		color: #828282
-.c2
+	&__btn
+		text-align: center
+		margin: 40px 0
+
+.comp2
 	background: var(--main-color) no-repeat 50% 0/cover
 	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 50px))
 	&__inner
@@ -35,6 +43,8 @@
 		align-items: center
 		text-align: center
 		padding: 20px 15px
+	&--partner
+		min-height: 700px
 	&__title
 		font-size: 24px
 		font-weight: 700
@@ -45,3 +55,161 @@
 		color: #F3E1F7
 		line-height: 1.9
 		margin-bottom: 50px
+		max-width: 875px
+		text-align: justify
+	&__btn
+		margin-bottom: 60px
+
+.comp3
+	&__inner
+		padding-bottom: 50px
+	&__items
+		position: relative
+		display: flex
+		justify-content: center
+		flex-wrap: wrap
+	&__item
+		max-width: 415px
+		margin: 10px
+		display: flex
+		flex-flow: column wrap
+	&__img
+		width: 100%
+		height: 300px
+		margin-bottom: 50px
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+	&__category
+		text-align: center
+		color: var(--main-color)
+		font-weight: 500
+		margin-bottom: 15px
+		margin-top: -30px
+	&__info
+		display: flex
+		justify-content: space-between
+		margin-bottom: 10px
+	&__name
+		flex-basis: 70%
+		color: var(--main-color)
+		font-weight: 500
+		small
+			display: block
+			line-height: 1
+			margin-bottom: 15px
+			font-size: 14px
+	&__price
+		color: #FF1CAB
+		white-space: nowrap
+	&__txt
+		margin-bottom: 20px
+	&__btn
+		display: flex
+		margin: 0 auto
+		margin-top: auto
+.comp4
+	&__bg
+		padding: 135px 0
+	&__inner
+		min-height: 600px
+		display: flex
+		flex-flow: column wrap
+		justify-content: flex-end
+		align-items: center
+		text-align: center
+	&__txt
+		max-width: 580px
+		p
+			line-height: 1.9
+			color: #F3E1F7
+	&__btn
+		margin-top: 50px
+	&--b
+		margin-bottom: -135px
+		.title
+			color: #fff
+			&::before
+				line-height: 1.8
+				opacity: 0.2
+		.comp4__inner
+			justify-content: flex-start
+		.comp4__btn
+			margin-top: auto
+.comp5
+	margin: 70px 0 100px 0
+	&__img
+		clip-path: polygon(0 70px, 100% 0, 100% calc(100% - 70px), 0 100%)
+		&--r
+			clip-path: polygon(50% 10%, 100% 0, 100% 90%, 50% 100%, 0 90%, 0 0)
+	&__items
+		display: grid
+		grid-template-columns: 1fr 1fr
+		grid-gap: 50px
+		margin-top: 20px
+	&__item
+		display: flex
+		flex-flow: column wrap
+	&__info
+		display: flex
+		align-items: center
+		justify-content: space-between
+		margin-bottom: 20px
+	&__name
+		flex-basis: 75%
+		color: var(--main-color)
+		font-weight: 500
+		small
+			display: block
+			line-height: 1
+			font-size: 14px
+	&__price
+		color: #FF1CAB
+		white-space: nowrap
+	&__item-txt2
+		margin-top: -25px
+		margin-bottom: 20px
+	&__item-list
+		margin-bottom: 35px
+		li
+			position: relative
+			line-height: 1.9
+			padding-left: 15px
+			margin-bottom: 20px
+			&::before
+				content: "\25c6"
+				position: absolute
+				left: 0
+				top: 7px
+				font-size: 12px
+	&__btn
+		text-align: center
+		margin-top: auto
+.comp6
+	margin-top: 55px
+	&__items
+		position: relative
+		display: flex
+		justify-content: center
+		flex-wrap: wrap
+	&__item
+		max-width: 415px
+		margin: 5px
+	&__figure
+		width: 100%
+		height: 225px
+		clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px)
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+	&__info
+		text-align: center
+		color: #525252
+		font-weight: normal
+		margin-top: 12px
+		small
+			display: block
+			font-size: 12px
+		

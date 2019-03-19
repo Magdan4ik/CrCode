@@ -12,9 +12,10 @@
     <!-- <link rel="manifest" href="../manifest.json"> -->
     <link rel="shortcut icon" href="../img/favicon/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
     <link rel="stylesheet" href="../css/main.css">
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script> -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js" defer></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" defer></script>
     <script src="../js/common.js" defer></script>
 </head>
 
@@ -59,10 +60,10 @@
 						<h2 class="screen__title">Свадьба</h2>
 						<nav class="screen__nav">
 							<ul class="social">
-								<li><a class="social__youtube" href="#youtube">Youtube</a></li>
-								<li><a class="social__facebook" href="#facebook">Facebook</a></li>
-								<li><a class="social__insta" href="#insta">Instagram</a></li>
-							</ul>
+    <li><a class="social__youtube" href="#youtube">Youtube</a></li>
+    <li><a class="social__facebook" href="#facebook">Facebook</a></li>
+    <li><a  class="social__insta" href="#insta">Instagram</a></li>
+</ul>
 							<ul class="navigation navigation--lside">
 								<li><a href="#">Организация</a></li>
 								<li><a href="#">Стоимость</a></li>
@@ -74,7 +75,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="organize">
+			<section class="organize --lpink">
 				<div class="organize__inner container">
 					<h2 class="title organize__title" data-title="Организация">Организация</h2>
 					<ul class="organize__list">
@@ -109,11 +110,205 @@
 				</div>
 			</section>
 
-			<section class="с2" style="background-image: url('../img/care.jpg')">
-				<div class="с2__inner container">
-					<div class="с2__title">Все заботы мы берем на себя</div>
-					<div class="с2__txt">Вам остается только проснуться с хорошем настроении и насладиться вашим праздником! Запишитесь на первую бесплатную встречу и мы обсудим все интересующие вас вопросы.</div>
+			<section class="comp2" style="background-image: url('../img/care.jpg')">
+				<div class="comp2__inner container">
+					<div class="comp2__title">Все заботы мы берем на себя</div>
+					<div class="comp2__txt">Вам остается только проснуться с хорошем настроении и насладиться вашим праздником! Запишитесь на первую бесплатную встречу и мы обсудим все интересующие вас вопросы.</div>
 					<a href="#" class="btn btn--primary">Записаться на встречу</a>
+				</div>
+			</section>
+			<section class="comp3 comp3--slider">
+				<div class="comp3__inner container">
+					<h2 class="title comp3__title" data-title="Услуги и цены">Услуги и цены</h2>
+					<ul class="comp3__items">
+						<li class="comp3__item">
+							<figure class="comp3__img"><img src="../img/service.jpg" alt=""></figure>
+							<div class="comp3__info">
+								<span class="comp3__name">Candy bar</span>
+								<span class="comp3__price">от 2000грн</span>
+							</div>
+							<div class="comp3__txt">Candy Bar, именуемый также Candy Buffet, Sweet Bar, сладкий стол, сладкий шведский стол – это стилизованно декорированный фуршетный стол со всевозможными сладостями.</div>
+							<a href="#" class="btn btn--primary comp3__btn">Записаться на встречу</a>
+						</li>
+						<li class="comp3__item">
+							<figure class="comp3__img"><img src="../img/service.jpg" alt=""></figure>
+							<div class="comp3__info">
+								<span class="comp3__name">Candy bar</span>
+								<span class="comp3__price">от 2000грн</span>
+							</div>
+							<div class="comp3__txt">Candy Bar, именуемый также Candy Buffet, Sweet Bar, сладкий стол, сладкий шведский стол – это стилизованно декорированный фуршетный стол со всевозможными сладостями.</div>
+							<a href="#" class="btn btn--primary comp3__btn">Записаться на встречу</a>
+						</li>
+						<li class="comp3__item">
+							<figure class="comp3__img"><img src="../img/service.jpg" alt=""></figure>
+							<div class="comp3__info">
+								<span class="comp3__name">Candy bar</span>
+								<span class="comp3__price">от 2000грн</span>
+							</div>
+							<div class="comp3__txt">Candy Bar, именуемый также Candy Buffet, Sweet Bar, сладкий стол, сладкий шведский стол – это стилизованно декорированный фуршетный стол со всевозможными сладостями.</div>
+							<a href="#" class="btn btn--primary comp3__btn">Записаться на встречу</a>
+						</li>
+						<li class="comp3__item">
+							<figure class="comp3__img"><img src="../img/service.jpg" alt=""></figure>
+							<div class="comp3__info">
+								<span class="comp3__name">Candy bar</span>
+								<span class="comp3__price">от 2000грн</span>
+							</div>
+							<div class="comp3__txt">Candy Bar, именуемый также Candy Buffet, Sweet Bar, сладкий стол, сладкий шведский стол – это стилизованно декорированный фуршетный стол со всевозможными сладостями.</div>
+							<a href="#" class="btn btn--primary comp3__btn">Записаться на встречу</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="portfolio --dpink">
+				<div class="portfolio__inner container">
+					<h2 class="title portfolio__title" data-title="Портфолио">Портфолио</h2>
+					<ul class="portfolio__list">
+						<li class="portfolio__item">
+							<div class="portfolio__gallery">
+								<figure><img src="../img/portfolio-gallery.jpg" alt=""></figure>
+								<figure><img src="../img/portfolio-gallery.jpg" alt=""></figure>
+								<figure><img src="../img/portfolio-gallery.jpg" alt=""></figure>
+								<figure><img src="../img/portfolio-gallery.jpg" alt=""></figure>
+								<figure><img src="../img/portfolio-gallery.jpg" alt=""></figure>
+								<figure><img src="../img/portfolio-gallery.jpg" alt=""></figure>
+							</div>
+							<div class="portfolio__gallery-name">
+								<p>Предложение</p>
+								<small>руки и сердца</small>
+							</div>
+						</li>
+						<li class="portfolio__item">
+							<div class="portfolio__gallery">
+								<figure><img src="../img/portfolio-gallery.jpg" alt=""></figure>
+								<figure><img src="../img/portfolio-gallery.jpg" alt=""></figure>
+								<figure><img src="../img/portfolio-gallery.jpg" alt=""></figure>
+								<figure><img src="../img/portfolio-gallery.jpg" alt=""></figure>
+								<figure><img src="../img/portfolio-gallery.jpg" alt=""></figure>
+								<figure><img src="../img/portfolio-gallery.jpg" alt=""></figure>
+							</div>
+							<div class="portfolio__gallery-name">
+								<p>Предложение</p>
+								<small>руки и сердца</small>
+							</div>
+						</li>
+						<li class="portfolio__item">
+							<div class="portfolio__gallery">
+								<figure><img src="../img/portfolio-gallery.jpg" alt=""></figure>
+								<figure><img src="../img/portfolio-gallery.jpg" alt=""></figure>
+								<figure><img src="../img/portfolio-gallery.jpg" alt=""></figure>
+								<figure><img src="../img/portfolio-gallery.jpg" alt=""></figure>
+								<figure><img src="../img/portfolio-gallery.jpg" alt=""></figure>
+								<figure><img src="../img/portfolio-gallery.jpg" alt=""></figure>
+							</div>
+							<div class="portfolio__gallery-name">
+								<p>Предложение</p>
+								<small>руки и сердца</small>
+							</div>
+						</li>
+						<li class="portfolio__item">
+							<div class="portfolio__gallery">
+								<figure><img src="../img/portfolio-gallery.jpg" alt=""></figure>
+								<figure><img src="../img/portfolio-gallery.jpg" alt=""></figure>
+								<figure><img src="../img/portfolio-gallery.jpg" alt=""></figure>
+								<figure><img src="../img/portfolio-gallery.jpg" alt=""></figure>
+								<figure><img src="../img/portfolio-gallery.jpg" alt=""></figure>
+								<figure><img src="../img/portfolio-gallery.jpg" alt=""></figure>
+							</div>
+							<div class="portfolio__gallery-name">
+								<p>Предложение</p>
+								<small>руки и сердца</small>
+							</div>
+						</li>
+						<li class="portfolio__item">
+							<div class="portfolio__gallery">
+								<figure><img src="../img/portfolio-gallery.jpg" alt=""></figure>
+								<figure><img src="../img/portfolio-gallery.jpg" alt=""></figure>
+								<figure><img src="../img/portfolio-gallery.jpg" alt=""></figure>
+								<figure><img src="../img/portfolio-gallery.jpg" alt=""></figure>
+								<figure><img src="../img/portfolio-gallery.jpg" alt=""></figure>
+								<figure><img src="../img/portfolio-gallery.jpg" alt=""></figure>
+							</div>
+							<div class="portfolio__gallery-name">
+								<p>Предложение</p>
+								<small>руки и сердца</small>
+							</div>
+						</li>
+					</ul>
+					<a href="#" class="btn btn--primary portfolio__btn">Перейти в галерею</a>
+				</div>
+			</section>
+			<section class="comp5">
+				<h2 class="title" data-title="Школа невест">Школа невест</h2>
+				<figure class="comp5__img"><img src="../img/weeding-school.jpg" alt=""></figure>
+				<div class="comp5__inner container">
+					<div class="comp5__items">
+						<div class="comp5__item">
+							<div class="comp5__info">
+								<span class="comp5__name">Семинар<small>для невест</small></span>
+								<span class="comp5__price">Бесплатно</span>
+							</div>
+							<ul class="comp5__item-list">
+								<li>Мечтаешь о современной, стильной свадьбе в европейском стиле?</li>
+								<li>Планируешь самостоятельно ее организовать?</li>
+								<li>Не знаешь с чего начать, как распределить бюджет и где искать качественные услуги?</li>
+								<li>Не хватает времени?</li>
+								<li>Нет помощника?</li>
+							</ul>
+							<div class="comp5__btn"><a href="#" class="btn btn--primary">Узнать решение</a></div>
+						</div>
+						<div class="comp5__item">
+							<div class="comp5__info">
+								<span class="comp5__name">Практикум<small>для невест</small></span>
+								<span class="comp5__price">800грн</span>
+							</div>
+							<ul class="comp5__item-list">
+								<li>Мечтаешь о современной, стильной свадьбе в европейском стиле?</li>
+								<li>Планируешь самостоятельно ее организовать?</li>
+								<li>Не знаешь с чего начать, как распределить бюджет и где искать качественные услуги?</li>
+								<li>Не хватает времени?</li>
+								<li>Нет помощника?</li>
+							</ul>
+							<div class="comp5__btn"><a href="#" class="btn btn--primary">Узнать больше</a></div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="comp3">
+				<div class="comp3__inner container">
+					<h2 class="title comp3__title" data-title="Сервис аренды">Сервис аренды</h2>
+					<ul class="comp3__items">
+						<li class="comp3__item">
+							<figure class="comp3__img"><img src="../img/service.jpg" alt=""></figure>
+							<h3 class="comp3__category">Платья</h3>
+							<div class="comp3__info">
+								<span class="comp3__name">Для подружок<small>невесты</small></span>
+								<span class="comp3__price">от 800грн</span>
+							</div>
+							<div class="comp3__txt">Платья-трансформеры – одна из новых тенденций в мире нарядов подружек невесты. И, пожалуй, это единственный вид платьев, который может угодить практически каждой девушке.</div>
+							<a href="#" class="btn btn--primary comp3__btn">Выбрать цвет</a>
+						</li>
+						<li class="comp3__item">
+							<figure class="comp3__img"><img src="../img/service.jpg" alt=""></figure>
+							<h3 class="comp3__category">Мебель</h3>
+							<div class="comp3__info">
+								<span class="comp3__name">Для подружок<small>невесты</small></span>
+								<span class="comp3__price">от 800грн</span>
+							</div>
+							<div class="comp3__txt">Платья-трансформеры – одна из новых тенденций в мире нарядов подружек невесты. И, пожалуй, это единственный вид платьев, который может угодить практически каждой девушке.</div>
+							<a href="#" class="btn btn--primary comp3__btn">Выбрать цвет</a>
+						</li>
+						<li class="comp3__item">
+							<figure class="comp3__img"><img src="../img/service.jpg" alt=""></figure>
+							<h3 class="comp3__category">Посуда</h3>
+							<div class="comp3__info">
+								<span class="comp3__name">Для подружок<small>невесты</small></span>
+								<span class="comp3__price">от 800грн</span>
+							</div>
+							<div class="comp3__txt">Платья-трансформеры – одна из новых тенденций в мире нарядов подружек невесты. И, пожалуй, это единственный вид платьев, который может угодить практически каждой девушке.</div>
+							<a href="#" class="btn btn--primary comp3__btn">Выбрать цвет</a>
+						</li>
+					</ul>
 				</div>
 			</section>
 			<section class="feedback --lblue --pleft">
@@ -173,18 +368,18 @@
             <div class="footer__soc">
                 <h4 class="footer__soc-title">Свадьбы</h4>
                 <ul class="social">
-                    <li><a class="social__youtube" href="#youtube">Youtube</a></li>
-                    <li><a class="social__facebook" href="#facebook">Facebook</a></li>
-                    <li><a class="social__insta" href="#insta">Instagram</a></li>
-                </ul>
+    <li><a class="social__youtube" href="#youtube">Youtube</a></li>
+    <li><a class="social__facebook" href="#facebook">Facebook</a></li>
+    <li><a  class="social__insta" href="#insta">Instagram</a></li>
+</ul>
             </div>
             <div class="footer__soc">
                 <h4 class="footer__soc-title">Мероприятия</h4>
                 <ul class="social">
-                    <li><a class="social__youtube" href="#youtube">Youtube</a></li>
-                    <li><a class="social__facebook" href="#facebook">Facebook</a></li>
-                    <li><a class="social__insta" href="#insta">Instagram</a></li>
-                </ul>
+    <li><a class="social__youtube" href="#youtube">Youtube</a></li>
+    <li><a class="social__facebook" href="#facebook">Facebook</a></li>
+    <li><a  class="social__insta" href="#insta">Instagram</a></li>
+</ul>
             </div>
         </nav>
     </div>

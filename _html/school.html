@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('./chunks/head.html', {"title": "Ивент-школа"})
+
+	<body>
+		@@include('./chunks/header.html')
+		<main class="main">
+			<section class="screen">
+				<div class="screen__inner" style="background-image: url('../img/page__event-school.jpg')">
+					<div class="screen__content container">
+						<h2 class="screen__title">Ивент-школа</h2>
+						<nav class="screen__nav">
+                            @@include('./chunks/social.html')
+							<ul class="navigation navigation--lside">
+								<li><a href="#">Для невест</a></li>
+								<li><a href="#">Уроки для пап</a></li>
+								<li><a href="#">Новогодние праздники</a></li>
+								<li><a href="#">Советы начинающим</a></li>
+								<li><a href="#">Костюмы</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</section>
+			<section class="comp5">
+				<h2 class="title" data-title="Школа невест">Школа невест</h2>
+				<figure class="comp5__img comp5__img--r"><img src="../img/weeding-school.jpg" alt=""></figure>
+				<div class="comp5__inner container">
+					<div class="comp5__items">
+						<div class="comp5__item">
+							<div class="comp5__info">
+								<span class="comp5__name">Семинар<small>для невест</small></span>
+								<span class="comp5__price">Бесплатно</span>
+							</div>
+							<ul class="comp5__item-list">
+								<li>Мечтаешь о современной, стильной свадьбе в европейском стиле?</li>
+								<li>Планируешь самостоятельно ее организовать?</li>
+								<li>Не знаешь с чего начать, как распределить бюджет и где искать качественные услуги?</li>
+								<li>Не хватает времени?</li>
+								<li>Нет помощника?</li>
+							</ul>
+							<div class="comp5__btn"><a href="#" class="btn btn--primary">Узнать решение</a></div>
+						</div>
+						<div class="comp5__item">
+							<div class="comp5__info">
+								<span class="comp5__name">Практикум<small>для невест</small></span>
+								<span class="comp5__price">800грн</span>
+							</div>
+							<ul class="comp5__item-list">
+								<li>Мечтаешь о современной, стильной свадьбе в европейском стиле?</li>
+								<li>Планируешь самостоятельно ее организовать?</li>
+								<li>Не знаешь с чего начать, как распределить бюджет и где искать качественные услуги?</li>
+								<li>Не хватает времени?</li>
+								<li>Нет помощника?</li>
+							</ul>
+							<div class="comp5__btn"><a href="#" class="btn btn--primary">Узнать больше</a></div>
+						</div>
+					</div>
+				</div>
+			</section>
+			@@include('./chunks/feedback.html', {"bg": "--lblue"})
+		</main>
+		@@include('./chunks/footer.html')
+	</body>
+</html>
+
