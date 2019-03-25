@@ -1,4 +1,5 @@
 .gallery
+    margin-bottom: -75px
     &__inner
         padding-top: 70px
         padding-bottom: 210px
@@ -11,6 +12,7 @@
         &--page
             font-weight: 500
             margin-bottom: 30px
+            margin-top: 70px
     &__filter
         display: flex
         flex-wrap: wrap
@@ -36,6 +38,7 @@
         grid-template-columns: 1fr 1fr
         grid-gap: 30px 20px
         margin-top: 50px
+        +sm(grid-template-columns, 1fr)
     &__article
         animation: fadeIn 0.5s both
         &:hover
@@ -52,13 +55,27 @@
             object-fit: cover
             transition: 0.3s transform
             will-change: transform
+    &__info
+        display: flex
+        align-items: center
+        justify-content: space-between
+        margin-bottom: 20px
+    &__count
+        font-size: 18px
+        line-height: 1.5
+        color: var(--main-color)
     &__name
         color: var(--main-color)
+        font-size: 24px
+        line-height: 1.5
         text-align: center
-        font-weight: 300
-        font-size: 18px
-        line-height: 20px
-        padding: 14px
+        flex-shrink: 1
+    &__price
+        color: #FF1CAB
+        flex-wrap: nowrap
+        small
+            font-size: 10px
+
 
 /* Gallery photos */
 .gallery
@@ -84,8 +101,9 @@
 /* Gallery page inner */
 .gallery-page
     &__inner
-        padding-top: 70px
         padding-bottom: 210px
+    &__title
+        margin-bottom: 25px
     &__info
         display: grid
         grid-template-columns: 1fr 1fr
@@ -116,3 +134,7 @@
         overflow: hidden
         > *
             height: 100%
+    &__btn
+        text-align: center
+        margin-top: 55px
+        margin-bottom: 50px

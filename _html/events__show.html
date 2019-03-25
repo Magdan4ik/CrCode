@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('./chunks/head.html', {"title": "Шоу-центр"})
+
+	<body>
+		@@include('./chunks/header.html')
+		<main class="main">
+			<section class="screen">
+                <div class="screen__inner" style="background-image: url('../img/page__show.jpg')">
+					<div class="screen__content container">
+						<h2 class="screen__title screen__title--white">Шоу-центр</h2>
+						<nav class="screen__nav screen__nav--wider">
+                            @@include('./chunks/social.html')
+							<ul class="navigation navigation--lside">
+								<li><a href="#">Шоу-балет</a></li>
+                                <li><a href="#">Санта и два оленя</a></li>
+                                <li><a href="#">ShowMoFilm</a></li>
+								<li><a href="#">Поющие бурундуки</a></li>
+							</ul>
+						</nav>
+                    </div>
+				</div>
+            </section>
+            <section class="show --pleft --lpurple">
+                <section class="comp5">
+                    <div class="comp5__inner container">
+                        <h2 class="title" data-title="Шоу-балет">Шоу-балет</h2>
+                        <div class="comp5__subtitle">
+                            <p>Мы разработаем концепцию и единый стиль Вашего праздника, создадим подробный сценарий и аботаем план действий.</p>
+                        </div>
+                    </div>
+                    <figure class="comp5__img comp5__img--r"><img src="../img/show-balet.jpg" alt=""></figure>
+                    <div class="comp5__btn comp5__btn--cnt"><a href="#" class="btn btn--primary">Узнать больше</a></div>
+                </section>
+			    <section class="comp8">
+			    	<div class="comp8__inner container">
+			    		<div class="comp8__video">
+			    			<video controls>
+			    				<source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+			    			</video>
+                        </div>
+                        <div class="comp8__btn"><a href="#" class="btn btn--primary">Смотреть все видео</a></div>
+			    	</div>
+                </section>
+            </section>
+            <section class="comp7">
+                <div class="comp7__bg">
+                    <div class="comp7__inner container">
+                        <h2 class="title title--w" data-title="Санта и два оленя">Санта и два оленя</h2>
+                        <div class="comp7__txt">
+                            <p>Мы разработаем концепцию и единый стиль Вашего праздника, создадим подробный сценарий и разработаем план действий.</p>
+                            <p>Мы разработаем концепцию и единый стиль Вашего праздника, создадим подробный сценарий и разработаем план действий.</p>
+                            <p>Мы разработаем концепцию и единый стиль Вашего праздника, создадим подробный сценарий и разработаем план действий.</p>
+                            <p>Мы разработаем концепцию и единый стиль Вашего праздника, создадим подробный сценарий и разработаем план действий.</p>
+                        </div>
+                        <div class="comp7__btn"><a href="#" class="btn btn--primary">Узнать больше</a></div>
+                    </div>
+                </div>
+            </section>
+            <section class="event-top">
+                <h2 class="title" data-title="SlowMoFilm">SlowMoFilm</h2>
+                <div class="event-top__subtitle">Мы разработаем концепцию и единый стиль Вашего праздника, создадим подробный сценарий и разработаем план действий.</div>
+                <section class="comp10">
+                    <div class="comp10__inner">
+                        <ul class="comp10__list">
+                            <li class="comp10__item">
+                                <figure class="comp10__img"><img src="../img/show-balet.jpg"alt=""></figure>
+                            </li>
+                            <li class="comp10__item">
+                                <figure class="comp10__img"><img src="../img/page__show.jpg"alt=""></figure>
+                            </li>
+                            <li class="comp10__item">
+                                <figure class="comp10__img"><img src="../img/page__blog.jpg"alt=""></figure>
+                            </li>
+                            <li class="comp10__item">
+                                <figure class="comp10__img"><img src="../img/page__party.jpg"alt=""></figure>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <div class="event-top__btn">
+                    <a href="#" class="btn btn--primary">Смотреть все фото</a>
+                    <a href="#" class="btn btn--primary">Смотреть все видео</a>
+                </div>
+            </section>
+            <section class="comp7 comp7--es">
+                <div class="comp7__bg">
+                    <div class="comp7__inner container">
+                        <h2 class="title title--w" data-title="Санта и два оленя">Санта и два оленя</h2>
+                        <div class="comp7__txt">
+                            <p>Мы разработаем концепцию и единый стиль Вашего праздника, создадим подробный сценарий и разработаем план действий.</p>
+                            <p>Мы разработаем концепцию и единый стиль Вашего праздника, создадим подробный сценарий и разработаем план действий.</p>
+                            <p>Мы разработаем концепцию и единый стиль Вашего праздника, создадим подробный сценарий и разработаем план действий.</p>
+                            <p>Мы разработаем концепцию и единый стиль Вашего праздника, создадим подробный сценарий и разработаем план действий.</p>
+                        </div>
+                        <div class="comp7__btn"><a href="#" class="btn btn--primary">Узнать больше</a></div>
+                    </div>
+                </div>
+            </section>
+			@@include('./chunks/feedback.html', {"bg": "--lblue"})
+		</main>
+		@@include('./chunks/footer.html')
+	</body>
+</html>
+

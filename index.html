@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
     <meta charset="utf-8">
-    <title>Вечеринки</title>
+    <title>Главная</title>
     <!-- <base href="/"> -->
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -20,7 +20,7 @@
 </head>
 
 	<body>
-		<header class="header">
+		<header class="header" hidden>
     <div class="header__inner container">
         <div class="header__lside">
             <ul class="header__nav">
@@ -54,86 +54,118 @@
     </div>
 </header>
 		<main class="main">
-			<section class="screen">
-				<div class="screen__inner" style="background-image: url('../img/page__party.jpg')">
-					<div class="screen__content container">
-						<h2 class="screen__title screen__title--white">Вечеринки</h2>
-						<nav class="screen__nav">
-                            <ul class="social">
+			<section class="base">
+				<div class="base__inner">
+					<div class="base__part base__part--wedding">
+						<h2 class="base__title">Свадьба</h2>
+						<nav class="base__nav base__nav--lside">
+							<ul class="social">
     <li><a class="social__youtube" href="#youtube">Youtube</a></li>
     <li><a class="social__facebook" href="#facebook">Facebook</a></li>
     <li><a  class="social__insta" href="#insta">Instagram</a></li>
 </ul>
 							<ul class="navigation navigation--lside">
-								<li><a href="#">Fashion Animals</a></li>
-								<li><a href="#">Crazy Animals</a></li>
-								<li><a href="#">Разные</a></li>
+								<li><a href="#">Организация</a></li>
+								<li><a href="#">Портфолио</a></li>
+								<li><a href="#">Стоимость</a></li>
+								<li><a href="school.html">Школа</a></li>
+								<li><a href="#">Услуги</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="base__part base__part--event">
+						<h2 class="base__title">Мероприятия</h2>
+						<nav class="base__nav base__nav--rside">
+							<ul class="social">
+    <li><a class="social__youtube" href="#youtube">Youtube</a></li>
+    <li><a class="social__facebook" href="#facebook">Facebook</a></li>
+    <li><a  class="social__insta" href="#insta">Instagram</a></li>
+</ul>
+							<ul class="navigation navigation--rside">
+								<li><a href="#">Корпоративные</a></li>
+								<li><a href="#">Вечеринки</a></li>
+								<li><a href="#">Портфолио</a></li>
+								<li><a href="#">Детские</a></li>
+								<li><a href="#">Услуги</a></li>
 							</ul>
 						</nav>
 					</div>
 				</div>
 			</section>
-			<section class="fashion-animals">
-				<h2 class="title" data-title="Fashion Animals">Fashion Animals</h2>
-				<div class="fashion-animals__subtitle">Мы разработаем концепцию и единый стиль Вашего праздника, создадим подробный сценарий и разработаем план действий.</div>
-				<section class="comp10 comp10--b">
-					<div class="comp10__inner">
-						<ul class="comp10__list">
-							<li class="comp10__item">
-								<figure class="comp10__img"><img src="../img/show-balet.jpg"alt=""></figure>
-							</li>
-							<li class="comp10__item">
-								<figure class="comp10__img"><img src="../img/page__show.jpg"alt=""></figure>
-							</li>
-							<li class="comp10__item">
-								<figure class="comp10__img"><img src="../img/page__blog.jpg"alt=""></figure>
-							</li>
-							<li class="comp10__item">
-								<figure class="comp10__img"><img src="../img/page__party.jpg"alt=""></figure>
-							</li>
-						</ul>
-					</div>
-				</section>
-				<div class="fashion-animals__btn"><a href="#" class="btn btn--primary">Узнать больше</a></div>
-			</section>
-            <section class="comp7">
-				<h2 class="title" data-title="Crazy Animals">Crazy Animals</h2>
-				<div class="comp7__subtitle">Мы разработаем концепцию и единый стиль Вашего праздника, создадим подробный сценарий и разработаем план действий.</div>
-                <div class="comp7__bg">
-                    <div class="comp7__inner container">
-						<div class="comp7__txt">
-							<p>Мы разработаем концепцию и единый стиль Вашего праздника, создадим подробный сценарий и разработаем план действий.</p>
-							<p>Мы разработаем концепцию и единый стиль Вашего праздника, создадим подробный сценарий и разработаем план действий.</p>
-						</div>
-                        <div class="comp7__btn"><a href="#" class="btn btn--primary">Узнать больше</a></div>
-                    </div>
-                </div>
-			</section>
-			<section class="comp1">
-				<div class="comp1__inner container">
-					<h2 class="title" data-title="В разных стилях">В разных стилях</h2>
-					<ul class="comp1__list">
-						<li class="comp1__item">
-							<figure class="comp1__photo"><img src="../img/command__photo.jpg" alt=""></figure>
-							<p class="comp1__name comp1__name--c">Crazy Games</p>
-                            <p class="comp1__desc">Мы разработаем концепцию и единый стиль Вашего праздника, создадим подробный сценарий и разработаем план действий.</p>
-                            <div class="comp1__btn"><a href="#" class="btn btn--primary">Просмотреть услугу</a></div>
+			<section class="advant">
+				<div class="advant__inner container">
+					<h2 class="title advant__title" data-title="Почему мы">Почему мы</h2>
+					<ul class="advant__list">
+						<li class="advant__item">
+							<figure class="advant__ico"><img src="../img/icons/ico-crystal.svg" alt=""></figure>
+							<div class="advant__txt">Мы единственные в городе занимаемся разработкой, режиссурой и оформлением фото/видео съемки свадебного дня: прописываем подробный сценарий и создаем весь необходимый антураж для фото/видео сессии.</div>
+							<a href="#gallery" class="btn btn--primary advant__btn">Смотреть галерею</a>
 						</li>
-						<li class="comp1__item">
-							<figure class="comp1__photo"><img src="../img/command__photo.jpg" alt=""></figure>
-							<p class="comp1__name comp1__name--c">Elite Warrior</p>
-                            <p class="comp1__desc">Мы разработаем концепцию и единый стиль Вашего праздника, создадим подробный сценарий и разработаем план действий.</p>
-                            <div class="comp1__btn"><a href="#" class="btn btn--primary">Просмотреть услугу</a></div>
+						<li class="advant__item">
+							<figure class="advant__ico"><img src="../img/icons/ico-couples.svg" alt=""></figure>
+							<div class="advant__txt">На нашем сайте мы регулярно выкладываем множество полезной информации: авторские статьи, книги, а также видеоролики на свадебную тематику.</div>
+							<a href="#gallery" class="btn btn--primary advant__btn">Читать статьи</a>
 						</li>
-						<li class="comp1__item">
-							<figure class="comp1__photo"><img src="../img/command__photo.jpg" alt=""></figure>
-							<p class="comp1__name comp1__name--c">Hungry Animals</p>
-                            <p class="comp1__desc">Мы разработаем концепцию и единый стиль Вашего праздника, создадим подробный сценарий и разработаем план действий.</p>
-                            <div class="comp1__btn"><a href="#" class="btn btn--primary">Просмотреть услугу</a></div>
+						<li class="advant__item">
+							<figure class="advant__ico"><img src="../img/icons/ico-bride.svg" alt=""></figure>
+							<div class="advant__txt">Наша школа невест заинтересует тех, кто решил заниматься подготовкой к свадьбе самостоятельно, и поможет избежать многих распространенных ошибок.</div>
+							<a href="#gallery" class="btn btn--primary advant__btn">Школа невест</a>
+						</li>
+						<li class="advant__item">
+							<figure class="advant__ico"><img src="../img/icons/ico-arch.svg" alt=""></figure>
+							<div class="advant__txt">Мы разрабатываем уникальную концепцию и декор, который вы больше никогда не увидете в нашем городе.</div>
+							<a href="#gallery" class="btn btn--primary advant__btn">Выбрать декорации</a>
+						</li>
+						<li class="advant__item">
+							<figure class="advant__ico"><img src="../img/icons/ico-dowe.svg" alt=""></figure>
+							<div class="advant__txt">В нашей рассылке мы постоянно будем с вами делиться профессиональными секретами и последними событиями из нашей жизни и деятельности.</div>
+							<a href="#gallery" class="btn btn--primary advant__btn">Подписаться</a>
 						</li>
 					</ul>
 				</div>
-             </section>
+			</section>
+			<section class="comp1 --lblue --pright">
+				<div class="comp1__inner container">
+					<h2 class="title" data-title="Наша команда">Наша команда</h2>
+					<ul class="comp1__list">
+						<li class="comp1__item">
+							<figure class="comp1__photo"><img src="../img/command__photo.jpg" alt=""></figure>
+							<p class="comp1__name">Алена и Андрей</p>
+							<p class="comp1__desc">Теперь Вам не придется думать о предсвадебной суете и заботах, поскольку всю работу за вас сделает профессиональный организатор.</p>
+						</li>
+						<li class="comp1__item">
+							<figure class="comp1__photo"><img src="../img/command__photo.jpg" alt=""></figure>
+							<p class="comp1__name">Алена и Андрей</p>
+							<p class="comp1__desc">Теперь Вам не придется думать о предсвадебной суете и заботах, поскольку всю работу за вас сделает профессиональный организатор.</p>
+						</li>
+						<li class="comp1__item">
+							<figure class="comp1__photo"><img src="../img/command__photo.jpg" alt=""></figure>
+							<p class="comp1__name">Алена и Андрей</p>
+							<p class="comp1__desc">Теперь Вам не придется думать о предсвадебной суете и заботах, поскольку всю работу за вас сделает профессиональный организатор.</p>
+						</li>
+					</ul>
+				</div>
+			 </section>
+			 <section class="owner">
+				<div class="owner__inner">
+					<h2 class="title owner__title" data-title="Алена Дроздова">Алена Дроздова</h2>
+					<figure class="owner__photo"><img src="../img/owner__photo.jpg" alt=""></figure>
+					<div class="container">
+						<div class="owner__info">
+							<h4 class="owner__caption">Владелица и руководитель Свадебного Aгентства «Crystal Code»</h4>
+							<p class="owner__desc">Мы умеем создавать уникальные по замыслу и красоте свадьбы, наполняя их яркими эмоциями, искренними чувствами и интересными событиями. Наши пары получают лучшие услуги и отменный сервис</p>
+							<div class="owner__contacts">
+								<ul class="social">
+    <li><a class="social__youtube" href="#youtube">Youtube</a></li>
+    <li><a class="social__facebook" href="#facebook">Facebook</a></li>
+    <li><a  class="social__insta" href="#insta">Instagram</a></li>
+</ul>
+								<a href="#personal" class="btn btn--primary">Личная страница</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 			<section class="feedback --lblue --pleft">
     <div class="feedback__inner container">
         <h2 class="title feedback__title" data-title="Обратная связь">Обратная связь</h2>
@@ -163,7 +195,7 @@
     </div>
 </section>
 		</main>
-		<footer class="footer">
+		<footer class="footer" hidden>
     <div class="foooter__inner container">
         <nav class="footer__nav">
             <figure class="footer__logo">

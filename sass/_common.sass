@@ -40,6 +40,8 @@
 		font-weight: 800
 		text-transform: uppercase
 		opacity: 0.04
+	&--w
+		color: #CFDDE2
 
 /*============= SOCIAL STYLE START ============= */
 .social
@@ -212,6 +214,7 @@
 	position: relative
 	padding-bottom: 25px
 	overflow: hidden
+	z-index: 2
 	&::after
 		content: ""
 		position: absolute
@@ -227,14 +230,15 @@
 	&__content
 		display: flex
 		justify-content: flex-end
+		min-height: inherit
 	&__title
 		position: absolute
 		text-align: center
 		bottom: 35%
 		font-weight: 300
 		font-size: 72px
-		letter-spacing: 2em
-		text-indent: 2em
+		letter-spacing: 3.5vw
+		text-indent: 3.5vw
 		text-align: center
 		left: 0
 		right: 0
@@ -242,6 +246,8 @@
 		z-index: 2
 		text-transform: uppercase
 		user-select: none
+		&--white
+			color: #CFDDE2
 	&__nav
 		width: 390px
 		padding-top: 55px
@@ -256,6 +262,9 @@
 			top: 0
 			right: 0
 			z-index: -1
+		&--wider
+			&::after
+				width: 57%
 
 
 
@@ -638,7 +647,8 @@
 				background: url(../img/elements/arrow--right.svg) no-repeat center/contain
 				width: 10px
 				height: 10px
-				margin-left: 10px
+				margin-left: 6px
+				margin-top: 4px
 				display: inline-block
 
 
@@ -682,6 +692,105 @@
 				width: 100%
 				height: 100%
 				object-fit: cover
+		&__btn
+			text-align: center
+			margin-top: -80px
 .vsliders
 	clip-path: polygon(0 0, 100% 70px, 100% 100%, 0 calc(100% - 70px))
 	padding: 135px 0 145px 0
+.show
+	position: relative
+	margin-top: -100px
+	margin-bottom: -320px
+.purpose
+	position: relative
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 80px))
+	margin-top: -80px
+	padding: 135px 0
+	.interview-article__info
+		margin-bottom: 0
+		color: #525252
+	.interview-article__btn
+		margin-top: 50px
+	
+.main-purpose
+	&__info
+		display: flex
+		flex-flow: column wrap
+		align-items: center
+		color: #525252
+	&__ico
+		margin-bottom: 55px
+		margin-top: 40px
+	&__subtitle
+		font-size: 18px
+		font-weight: 600
+		text-align: center
+		margin-bottom: 5px
+		span
+			display: block
+			font-weight: normal
+/*============= EVENTS START ============= */
+
+/*============= EVENTS__PARTY PAGE ============= */
+.fashion-animals
+	position: relative
+	margin-bottom: -50px
+	&::before
+		content: ""
+		clip-path: polygon(59% 0, 100% 0, 100% 100%, 0 100%, 0 73%)
+		background: #F5F5FE
+		width: 100%
+		height: 100%
+		display: block
+		position: absolute
+		z-index: -1
+		top: -55px
+	&__subtitle
+		max-width: 620px
+		margin: 0 auto
+		margin-bottom: 25px
+		padding: 15px
+		text-align: center
+	&__btn
+		padding-top: 60px
+		padding-bottom: 140px
+		text-align: center
+.event-top
+	clip-path: polygon(0 0, 100% 0, 100% 72%, 85% 100%, 0 100%)
+	margin-top: -110px
+	padding-top: 110px
+	&__ico
+		img 
+			margin: 10px auto
+	&__subtitle
+		max-width: 620px
+		margin: 0 auto
+		margin-bottom: 25px
+		padding: 15px
+		text-align: center
+	&__btn
+		padding-top: 60px
+		padding-bottom: 95px
+		text-align: center
+		a
+			margin: 0 40px
+	&--r
+		clip-path: polygon(33% 0, 100% 0, 100% 72%, 85% 100%, 0 100%, 0 54%)
+.event2
+	position: relative
+	margin-top: 70px
+	margin-bottom: 110px
+	&__ico
+		img 
+			margin: 10px auto
+	&__subtitle
+		max-width: 620px
+		margin: 0 auto
+		margin-bottom: 25px
+		padding: 15px
+		text-align: center
+	&__btn
+		position: absolute
+		bottom: 0
+		right: calc(50% - 150px)
