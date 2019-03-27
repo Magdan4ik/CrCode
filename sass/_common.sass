@@ -86,6 +86,8 @@
 			padding: 8px
 			font-size: 24px
 			color: var(--main-color)
+			+sm-block()
+				font-size: 12px
 			&::after, &::before
 				background: var(--main-color)
 				width: 4px
@@ -116,6 +118,7 @@
 .main
 	padding-top: 55px
 	min-height: calc(100vh - 220px)
+	+sm(padding-top, 40px)
 
 /*============= MODIFICATORS ============= */
 .--lblue
@@ -133,6 +136,9 @@
 .--pleft
 	clip-path: polygon(0 0, 100% 135px, 100% 100%, 0 calc(100% - 135px))
 	padding: 135px 0 215px 0
+	+sm-block()
+		clip-path: polygon(0 0, 100% 60px, 100% 100%, 0 calc(100% - 60px))
+		padding: 60px 0 60px 0
 .--pright
 	clip-path: polygon(0 135px, 100% 0, 100% calc(100% - 135px), 0 100%)
 	padding: 135px 0 215px 0
@@ -215,6 +221,7 @@
 	padding-bottom: 25px
 	overflow: hidden
 	z-index: 2
+	$this: &;
 	&::after
 		content: ""
 		position: absolute
@@ -223,14 +230,23 @@
 		background-size: 100% 100%
 		width: 100%
 		height: 70px
+	&--wedding
+		#{$this}__title
+			letter-spacing: 9vw
 	&__inner
 		min-height: 950px
 		background: no-repeat center top/cover
 		clip-path: polygon(100% 0, 100% 94%, 50% 100%, 0 94%, 0 0)
+		+sm-block()
+			min-height: calc(100vh - 100px) //header height + pbottom
+			clip-path: polygon(100% 0, 100% 90%, 50% 100%, 0 90%, 0 0)
+			padding-bottom: 60px
 	&__content
 		display: flex
 		justify-content: flex-end
 		min-height: inherit
+		+sm-block()
+			flex-direction: column
 	&__title
 		position: absolute
 		text-align: center
@@ -246,6 +262,10 @@
 		z-index: 2
 		text-transform: uppercase
 		user-select: none
+		+sm-block()
+			bottom: calc(50% - 25px)
+			font-size: 32px
+			font-weight: normal
 		&--white
 			color: #CFDDE2
 	&__nav
@@ -253,6 +273,14 @@
 		padding-top: 55px
 		text-align: right
 		z-index: 1
+		+sm-block()
+			text-align: center
+			padding-top: 50%
+			width: 100%
+			.social
+				display: none
+			.navigation li a::after
+				display: none
 		&::after
 			content: ""
 			position: absolute
@@ -262,10 +290,29 @@
 			top: 0
 			right: 0
 			z-index: -1
+			+sm(display, none)
 		&--wider
 			&::after
 				width: 57%
-
+	&__scroll-down
+		display: none
+		position: absolute
+		bottom: 50px
+		left: calc(50% - 8px)
+		width: 16px
+		height: 20px
+		cursor: pointer
+		i
+			background: url('../img/elements/arrow--down-pink.svg') no-repeat center
+			width: 100%
+			height: 6px
+			display: block
+			animation: arrowDown 2s infinite
+			&:nth-of-type(1)
+				opacity: 0.2
+			&:nth-of-type(2)
+				opacity: 0.45
+		+sm(display, block)
 
 
 /*============= HOME - SECTION 1 ============= */
@@ -486,7 +533,6 @@
 
 .portfolio
 	clip-path: polygon(0 70px, 100% 0, 100% calc(100% - 70px), 0 100%)
-    padding: 70px 0 150px 0
 	padding: 70px 0 150px 0
 	.slick-arrow
 		top: initial
@@ -665,6 +711,7 @@
 			grid-gap: 30px
 			margin-top: 25px
 			margin-bottom: 120px
+			+sm(display, block)
 		&__txt
 			display: flex
 			flex-flow: column wrap
@@ -688,6 +735,7 @@
 			width: 100%
 			height: 290px
 			clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px)
+			+sm(display, none)
 			img
 				width: 100%
 				height: 100%
@@ -707,6 +755,19 @@
 	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 80px))
 	margin-top: -80px
 	padding: 135px 0
+	+sm-block()
+		padding-bottom: 60px
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 60px))
+	+xs-block()
+	~
+		.gallery .gallery__articles
+			grid-template-columns: 1fr 1fr
+		+sm-block()
+			.gallery .gallery__info
+				flex-flow: column wrap
+			.gallery .gallery__name
+				order: -1
+				font-size: 24px
 	.interview-article__info
 		margin-bottom: 0
 		color: #525252
@@ -727,6 +788,7 @@
 		font-weight: 600
 		text-align: center
 		margin-bottom: 5px
+		+sm(font-size, 14px)
 		span
 			display: block
 			font-weight: normal

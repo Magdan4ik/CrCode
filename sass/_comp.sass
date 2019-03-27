@@ -151,11 +151,17 @@
 		clip-path: polygon(0 70px, 100% 0, 100% calc(100% - 70px), 0 100%)
 		&--r
 			clip-path: polygon(50% 10%, 100% 0, 100% 90%, 50% 100%, 0 90%, 0 0)
+			+sm-block()
+				clip-path: polygon(0 45px, 100% 0, 100% calc(100% - 45px), 0 100%)
+				img 
+					object-fit: cover
+					min-height: 240px	
 	&__items
 		display: grid
 		grid-template-columns: 1fr 1fr
 		grid-gap: 50px
 		margin-top: 20px
+		+sm(grid-template-columns, 1fr)
 	&__item
 		display: flex
 		flex-flow: column wrap
@@ -168,6 +174,7 @@
 		flex-basis: 75%
 		color: var(--main-color)
 		font-weight: 500
+		+sm(font-size, 24px)
 		small
 			display: block
 			line-height: 1
@@ -175,22 +182,28 @@
 	&__price
 		color: #FF1CAB
 		white-space: nowrap
+		+sm(font-size, 18px)
 	&__item-txt2
 		margin-top: -25px
 		margin-bottom: 20px
 	&__item-list
 		margin-bottom: 35px
+		+sm(margin-bottom, 10px)
 		li
 			position: relative
 			line-height: 1.9
 			padding-left: 15px
 			margin-bottom: 20px
+			+sm(margin-bottom, 10px)
 			&::before
 				content: "\25c6"
 				position: absolute
 				left: 0
 				top: 7px
 				font-size: 12px
+				+sm-block()
+					top: 5px
+					font-size: 10px
 	&__btn
 		text-align: center
 		margin-top: auto
@@ -278,18 +291,24 @@
 
 .comp9
 	margin-bottom: 150px
+	+sm(margin-bottom, 60px)
 	&__inner
 		display: flex
 		flex-flow: column wrap
 		align-items: center
 		color: #525252
+		+sm-block()
+			align-items: flex-start
+			margin-left: 20px
 	&__list
 		display: flex
 		flex-flow: row wrap
 		justify-content: center
+		+sm(flex-flow, column wrap)
 	&__title
 		margin-bottom: 35px
 		color: #525252
+		+sm(margin, 0 auto)
 	&__item
 		position: relative
 		counter-increment: number
@@ -304,12 +323,16 @@
 			line-height: 1
 			font-weight: bold
 			color: rgba(87, 22, 104, 0.1)
+			+sm-block()
+				top: -20px
+				left: 20px
 	&__txt
 		max-width: 1040px
 		margin: 0 auto
 		margin-top: 50px
 	&__txt2
 		font-weight: bold
+		+sm(font-weight, normal)
 	&__btn
 		text-align: center
 		margin-top: 60px
@@ -327,6 +350,7 @@
 		display: flex
 		height: 360px
 		overflow: hidden
+		+sm(height, 240px)
 	&__item
 		flex: 0 0 25%
 		&:nth-of-type(1),

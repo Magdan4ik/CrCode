@@ -49,14 +49,15 @@ body
 	font-family: var(--main-font)
 	font-weight: 400
 	overflow-x: hidden
-	// &::before
-	// 	content: ""
-	// 	position: fixed
-	// 	z-index: 222
-	// 	left: 50%
-	// 	height: 100%
-	// 	width: 1px
-	// 	background: red
+	+sm(font-size, 14px)
+	&::before
+		content: ""
+		position: fixed
+		z-index: 222
+		left: 50%
+		height: 100%
+		width: 1px
+		background: red
 
 a, button
 	background: transparent
@@ -185,5 +186,5 @@ input
 	padding-left: 15px
 	margin-right: auto
 	margin-left: auto
-	// border-left: 1px solid red
-	// border-right: 1px solid red
+	border-left: 1px solid red
+	border-right: 1px solid red
